@@ -348,7 +348,7 @@ async fn print_packet_stream(
                     .filter_map(versioned_tx_from_packet)
                     .collect();
                 for tx in transactions {
-                    info!("tx sig: {:?}", tx);
+                    info!("tx sig: {:?}", tx.signatures[0]);
                 }
             }
             Ok(Some(Err(e))) => {
