@@ -6,3 +6,34 @@ members = [
     "searcher_client",
 ]
 resolver = "2"
+
+
+[workspace.dependencies]
+jito-searcher-client = { path = "./searcher_client" }
+jito-protos = { path = "./jito_protos" }
+
+tokio = "1.36.0"
+crossbeam-channel = "0.5.12"
+chrono = "0.4.35"
+bytes = "1.6.0"
+bincode = "1.3.3"
+clap = { version = "4", features = ["derive", "env"] }
+env_logger = "0.11.3"
+futures-util = "0.3.30"
+histogram = "0.9.1"
+log = "0.4.21"
+rand = "0.8.5"
+thiserror = "1.0.58"
+
+solana-client = "1.18.8"
+solana-metrics = "1.18.8"
+solana-sdk = "1.18.8"
+solana-perf = "1.18.8"
+solana-transaction-status = "1.18.8"
+spl-memo = "=4.0.0"
+
+tonic = { version = "0.10", features = ["tls", "tls-roots", "tls-webpki-roots"] }
+tonic-build = "0.10"
+
+prost = "0.12"
+prost-types = "0.12"
